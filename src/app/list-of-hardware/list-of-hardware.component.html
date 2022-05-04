@@ -1,0 +1,13 @@
+<h1>Hardware List</h1>
+<ul class="hardware">
+  <li *ngFor="let hardware of hardware"
+      (click)="onSelect(hardware)"
+      [class.selected]="hardware === selectedHardware">
+    <a [routerLink]="['/hardware', hardware.id ]">
+      <span class="badge tekst">{{hardware.name}} </span> {{hardware.price}} kn
+    </a>
+
+    <!-- <button class="deleteButton" (click)="delete(hardware?.articleCode!)">X</button> -->
+  </li>
+</ul>
+<router-outlet></router-outlet>
