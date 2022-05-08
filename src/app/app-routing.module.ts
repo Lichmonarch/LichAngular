@@ -5,7 +5,7 @@ import {ListOfHardwareComponent} from "./list-of-hardware/list-of-hardware.compo
 
 const routes: Routes = [
   { path: 'hardware', component: ListOfHardwareComponent },
-  { path: 'hardware/:articleCode', component: HardwareDetailsComponent }
+  { path: 'hardware/:id', component: HardwareDetailsComponent }
 ];
 
 @NgModule({

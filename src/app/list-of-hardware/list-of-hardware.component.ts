@@ -28,10 +28,10 @@ export class ListOfHardwareComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getHardware();
+    this.getAllHardware();
   }
 
-  getHardware(): void {
+  getAllHardware(): void {
     this.hardwareService.getAllHardware()
       .subscribe(hardware => this.hardware = hardware);
   }
@@ -41,7 +41,7 @@ export class ListOfHardwareComponent implements OnInit {
   }
 
   navigateToDetails(hardware: Hardware) {
-    this.router.navigate([`/hardware/detail/${hardware.id}`]);
+    this.router.navigate([`/hardware/${hardware.id}`]);
   }
 
   deleteStudent(hardware: Hardware | string): Observable<Hardware> {
